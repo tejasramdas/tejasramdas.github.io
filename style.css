@@ -17,6 +17,9 @@ h1, h2, h3 {
 div {
 	padding-left:0.5em;
 }
+#email {
+	font-family: monospace;
+}
 #bio {
 	padding-top: 2em;
 }
