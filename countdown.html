@@ -31,7 +31,7 @@ permalink: /countdown/
 		//document.getElementById("count").innerHTML = days + " : " + hours.padStart(2, "0") + " : " + minutes.padStart(2, "0") + " : " + seconds.padStart(2, "0");
 
 		document.getElementById("count").innerHTML = weeks;
-		document.getElementById("progress").value = weeks/2.52;
+		document.getElementById("progress").value = 100 - weeks/2.52;
 
 		if (distance < 0) {
 			clearInterval(x);
