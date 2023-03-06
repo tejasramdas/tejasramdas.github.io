@@ -8,7 +8,10 @@ permalink: /countdown/
 		<title>Countdown</title>
 	</head>
 	<body>
-		<center> <h1 id="count"></h1> </center>
+		<center> 
+			<h1 id="count"></h1> 
+			<progress id="progress" value="32" max="100"> 32% </progress>
+		</center>
 	</body>
 	<script>
 	var countDownDate = new Date("Jul 1, 2026").getTime();
