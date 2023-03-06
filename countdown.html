@@ -10,7 +10,7 @@ permalink: /countdown/
 	<body>
 		<center> 
 			<h1 id="count"></h1> 
-			<progress id="progress" value="32" max="100"> 32% </progress>
+			<progress id="progress" value="32" max="100"> </progress>
 		</center>
 	</body>
 	<script>
@@ -29,7 +29,9 @@ permalink: /countdown/
 
 
 		//document.getElementById("count").innerHTML = days + " : " + hours.padStart(2, "0") + " : " + minutes.padStart(2, "0") + " : " + seconds.padStart(2, "0");
+
 		document.getElementById("count").innerHTML = weeks;
+		document.getElementById("progress").value = weeks/2.52;
 
 		if (distance < 0) {
 			clearInterval(x);
