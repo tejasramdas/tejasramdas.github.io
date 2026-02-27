@@ -1,26 +1,77 @@
 <!DOCTYPE html>
 
-<!-- Snoopin around?? Well then, you should check out this video of my PCT hike: https://www.youtube.com/watch?v=YadSxyo-qh4 :) -->
 
 <html>
-	<head>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<title>Tejas Ramdas</title>
-	</head>
-	<body>
-		<h1>Tejas Ramdas</h1>
-		<h3 id="email">tejasramdas [at] g [dot] harvard [dot] edu</h3>
-		<div id="bio">
-			<p>I'm a <span id="year">first-year</span> graduate student in the <a href="https://pinphd.hms.harvard.edu/">Program in Neuroscience</a> at Harvard University advised by <a href="https://gershmanlab.com/index.html">Sam Gershman</a>. I'm interested in studying the principles of learning and memory in single neurons and single-celled organisms. Previously, I studied computational neuroscience and philosophy at the University of Southern California.</p>
-			<p>You've found me on the interwebs but I'd love to meet in person! Please reach out :)</p>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Tejas Ramdas</title>
+</head>
+
+<body>
+	<div id="header">
+		<div id="header-text">
+			<h1>Tejas Ramdas</h1>
+			<h3 id="email"><a href="mailto:tejasramdas@g.harvard.edu">tejasramdas@g.harvard.edu</a></h3>
 		</div>
-		<script type="text/javascript">
-			const years = ["first-year","second-year","third-year","fourth-year","fifth-year","sixth-year","burnt out"];
-			(function(){
+		<div id="photo">
+			<img src="photo.jpg" alt="Tejas Ramdas">
+		</div>
+	</div>
+	<div id="bio">
+		<p>I'm a <span id="year">first-year</span> graduate student in the <a href="https://pinphd.hms.harvard.edu/"
+				target="_blank">Program in Neuroscience</a> at Harvard University advised by <a
+				href="https://gershmanlab.com/index.html" target="_blank">Sam Gershman</a>. My work focuses on the
+			principles of learning and memory in single-celled organisms and single neurons, with the goal of
+			integrating theory and experiment. Previously, I studied computational
+			neuroscience and philosophy at the University of Southern California, where I worked with <a
+				href="https://viterbi.usc.edu/directory/faculty/Mel/Bartlett" target="_blank">Bartlett Mel</a> on
+			dendritic biophysics.</p>
+		<p>You've found me on the interwebs but I'd love to meet in person! <a
+				href="mailto:tejasramdas@g.harvard.edu">Please reach out</a>
+			<span style="font-family: 'Arial'">ツ</span>
+		</p>
+	</div>
+	<div id="publications">
+		<h3><strong>Publications</strong></h3>
+		<ul id="pub-list"></ul>
+		<h3><strong>Posters</strong></h3>
+		<ul id="poster-list"></ul>
+		<h3><strong>Talks</strong></h3>
+		<ul id="talk-list"></ul>
+	</div>
+	<div id="teaching">
+		<h3><strong>Teaching</strong></h3>
+		<ul id="teaching-list"></ul>
+	</div>
+	<div id="adventures">
+		<h3><strong>Selected Adventures</strong></h3>
+		<ul id="adventure-list"></ul>
+	</div>
+	<script src="publications.js"></script>
+	<script type="text/javascript">
+		const years = ["first-year", "second-year", "third-year", "fourth-year", "fifth-year", "sixth-year", "burnt out"];
+		(function () {
 			curr_date = new Date();
 			year = curr_date.getFullYear() - 2022 + (curr_date.getMonth() > 6);
 			document.getElementById("year").innerHTML = years[year];
-			})();
-		</script>
-	</body>
+
+			function renderList(items, listId) {
+				const list = document.getElementById(listId);
+				items.forEach(p => {
+					const li = document.createElement('li');
+					const title = p.url ? `<a href="${p.url}" target="_blank">${p.title}</a>` : p.title;
+					li.innerHTML = `${title}<br>${p.authors}<br>${p.venue} (${p.year})`;
+					list.appendChild(li);
+				});
+			}
+			renderList(publications, 'pub-list');
+			renderList(posters, 'poster-list');
+			renderList(talks, 'talk-list');
+			renderList(adventures, 'adventure-list');
+			renderList(teaching, 'teaching-list');
+		})();
+	</script>
+</body>
+
 </html>
