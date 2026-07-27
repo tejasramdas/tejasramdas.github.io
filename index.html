@@ -50,10 +50,10 @@
 	</div>
 	<script src="publications.js"></script>
 	<script type="text/javascript">
-		const years = ["first-year", "second-year", "third-year", "fourth-year", "fifth-year", "sixth-year", "burnt out"];
+		const years = ["first-year", "second-year", "third-year", "fourth-year", "fifth-year", "sixth-year", "seventh-year"];
 		(function () {
 			curr_date = new Date();
-			year = curr_date.getFullYear() - 2022 + (curr_date.getMonth() > 6);
+			year = curr_date.getFullYear() - 2021 + (curr_date.getMonth() > 6);
 			document.getElementById("year").innerHTML = years[year];
 
 			function renderList(items, listId) {
