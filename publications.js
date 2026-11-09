@@ -1,5 +1,33 @@
 const publications = [
     {
+        title: "An improved Stentor coeruleus genome and time-resolved transcriptomics link cyclic nucleotide-dependent kinase signaling to single-cell habituation",
+        authors: "Yue Miao, Danielle Khost, Austen Theroux, Nhi Doan, <b>Tejas Ramdas</b>, Samuel J. Gershman",
+        venue: "bioRxiv",
+        year: 2026,
+        url: "https://doi.org/10.64898/2026.07.23.740246"
+    },
+    {
+        title: "A quantitative portrait of habituation in Stentor coeruleus",
+        authors: "<b>Tejas Ramdas</b>, Nhi Doan, Austen Theroux, Samuel J. Gershman",
+        venue: "eLife",
+        year: 2026,
+        url: "https://elifesciences.org/reviewed-preprints/112314"
+    },
+    {
+        title: "Associative learning in the protozoan Stentor coeruleus",
+        authors: "Nhi Doan, Austen Theroux, <b>Tejas Ramdas</b>, Samuel J. Gershman",
+        venue: "bioRxiv",
+        year: 2026,
+        url: "https://doi.org/10.64898/2026.02.25.708045"
+    },
+    {
+        title: "Storing long-lived memories via molecular error correction: a minimal mathematical model of Crick's memory switch",
+        authors: "John J. Vastola, <b>Tejas Ramdas</b>, Samuel J. Gershman",
+        venue: "bioRxiv",
+        year: 2025,
+        url: "https://doi.org/10.1101/2025.11.13.688304"
+    },
+    {
         title: "Optimizing a neuron for reliable dendritic subunit pooling",
         authors: "<strong>Tejas Ramdas</strong>, Bartlett W. Mel",
         venue: "Neuroscience",
